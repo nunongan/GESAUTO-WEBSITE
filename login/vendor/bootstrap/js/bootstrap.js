@@ -1,8 +1,4 @@
-/*!
- * Bootstrap v4.0.0-beta (https://getbootstrap.com)
- * Copyright 2011-2017 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
+
 
 if (typeof jQuery === 'undefined') {
   throw new Error('Bootstrap\'s JavaScript requires jQuery. jQuery must be included before Bootstrap\'s JavaScript.')
@@ -26,20 +22,11 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-/**
- * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-beta): util.js
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * --------------------------------------------------------------------------
- */
+
 
 var Util = function ($) {
 
-  /**
-   * ------------------------------------------------------------------------
-   * Private TransitionEnd Helpers
-   * ------------------------------------------------------------------------
-   */
+
 
   var transition = false;
 
@@ -51,7 +38,7 @@ var Util = function ($) {
     OTransition: 'oTransitionEnd otransitionend',
     transition: 'transitionend'
 
-    // shoutout AngusCroll (https://goo.gl/pxwQGp)
+
   };function toType(obj) {
     return {}.toString.call(obj).match(/\s([a-zA-Z]+)/)[1].toLowerCase();
   }
@@ -66,7 +53,7 @@ var Util = function ($) {
       delegateType: transition.end,
       handle: function handle(event) {
         if ($(event.target).is(this)) {
-          return event.handleObj.handler.apply(this, arguments); // eslint-disable-line prefer-rest-params
+          return event.handleObj.handler.apply(this, arguments); 
         }
         return undefined;
       }
@@ -119,11 +106,7 @@ var Util = function ($) {
     }
   }
 
-  /**
-   * --------------------------------------------------------------------------
-   * Public Util Api
-   * --------------------------------------------------------------------------
-   */
+
 
   var Util = {
 
@@ -131,8 +114,8 @@ var Util = function ($) {
 
     getUID: function getUID(prefix) {
       do {
-        // eslint-disable-next-line no-bitwise
-        prefix += ~~(Math.random() * MAX_UID); // "~~" acts like a faster Math.floor() here
+
+        prefix += ~~(Math.random() * MAX_UID); 
       } while (document.getElementById(prefix));
       return prefix;
     },
@@ -178,20 +161,11 @@ var Util = function ($) {
   return Util;
 }(jQuery);
 
-/**
- * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-beta): alert.js
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * --------------------------------------------------------------------------
- */
+
 
 var Alert = function ($) {
 
-  /**
-   * ------------------------------------------------------------------------
-   * Constants
-   * ------------------------------------------------------------------------
-   */
+
 
   var NAME = 'alert';
   var VERSION = '4.0.0-beta';
@@ -216,11 +190,7 @@ var Alert = function ($) {
     FADE: 'fade',
     SHOW: 'show'
 
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
+
 
   };
   var Alert = function () {
