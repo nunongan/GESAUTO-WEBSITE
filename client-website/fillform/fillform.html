@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <script>
+
+    function lockText() {
+      document.getElementById("reviewRequest").disabled = true;
+      document.getElementById("reviewRequest2").disabled = true;
+      document.getElementById("reviewRequest3").disabled = true;
+      document.getElementById("reviewRequest4").disabled = true;
+      document.getElementById("textareaDetail").disabled = true;
+      document.getElementById("submeter").style.visibility = "visible";
+      document.getElementById("editar").style.visibility = "visible";
+      document.getElementById("rever").style.visibility = "hidden";
+
+    }
+
+    function unlock() {
+      document.getElementById("reviewRequest").disabled = false;
+      document.getElementById("reviewRequest2").disabled = false;
+      document.getElementById("reviewRequest3").disabled = false;
+      document.getElementById("reviewRequest4").disabled = false;
+      document.getElementById("textareaDetail").disabled = false;
+      document.getElementById("submeter").style.visibility = "hidden";
+      document.getElementById("editar").style.visibility = "hidden";
+      document.getElementById("rever").style.visibility = "visible";
+
+    }
+
+
+
+
+  </script>
+  <title>Folha de Pedido</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/favicon.ico" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../fillform/stylesform.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+
+      </div>
+    </div>
+
+    <nav id="navbar" class="nav-menu navbar">
+      <ul>
+        <li><a href="../index.html " class="nav-link scrollto"><i class="fa fa-arrow-left"></i>
+            <span>Voltar</span></a></li>
+      </ul>
+    </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h3><strong>Informações do Serviço</strong></h2>
+            <ol>
+              <li><a href="index.html">Página Principal</a></li>
+              <li>Realização de Pedido</li>
+            </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+
+        <div class="col-sm-4">
+          <div class="portfolio-info" id="formpedido">
+            <h3>Folha de Pedido</h3>
+            <ul>
+              <label>Matrícula do Carro</label>
+              <input class="form-control" id="reviewRequest" type="textarea" placeholder="00-ZZ-00">
+              <label>Marca</label>
+              <input class="form-control" id="reviewRequest2" type="textarea" placeholder="BMW, Mercedes, Audi...">
+              <label>Modelo</label>
+              <input class="form-control" id="reviewRequest3" placeholder="Serie 1, CLA, A4...">
+              <label>Tipo de Serviço</label>
+              <select id="reviewRequest4" name="cars" id="cars" class="form-control">
+                <option value="Escolha o Serviço" class="form-control">Escolha o Serviço...</option>
+                <option value="Manutenção" class="form-control"> Manutenção</option>
+                <option value="Instalação" class="form-control"> Instalação</option>
+                <option value="Reparação" class="form-control"> Reparação</option>
+                <option value="Estética" class="form-control"> Estética </option>
+              </select>
+            </ul>
+            <label>Descrição detalhada do pedido:</label>
+            <textarea id="textareaDetail" class="form-control"></textarea>
+            <div class="row">
+              <div class="col d-flex justify-content-end">
+                <button class="btn btn-success" class="formpedido" id="submeter" type="submit" onclick="window.location.reload();"
+                  style="visibility:hidden;">Submeter</button>
+                <button class="btn btn-warning" class="formpedido" id="editar" type="button" style="visibility:hidden;"
+                  onclick="unlock()">Editar</button>
+                <button class="btn btn-primary" class="formpedido" id="rever" type="button" data-toggle="modal"
+                  data-target="#exampleModal" onclick="lockText();">Rever Pedido</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>CodeBetter</span></strong>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
+        Designed by Nuno Santos
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
